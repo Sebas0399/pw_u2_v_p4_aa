@@ -1,10 +1,12 @@
 <template>
-  <Calculadora></Calculadora>
-  
+  <Contador titulo="Estudiante" v-bind:inicio="102"></Contador>
+  <Contador titulo="Profesor" ></Contador>
+
 </template>
 
 <script>
 import Calculadora from './components/Calculadora.vue';
+import Contador from './components/Contador.vue';
 export default {
   name: 'App',
   data() {
@@ -13,7 +15,8 @@ export default {
     }
   },
   components: {
-    Calculadora
+    Calculadora,
+    Contador
   }
  ,
   methods:{
