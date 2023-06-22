@@ -1,12 +1,13 @@
 <template>
-  <Contador titulo="Estudiante" v-bind:inicio="102"></Contador>
-  <Contador titulo="Profesor" ></Contador>
+  <CaracolaMagica ></CaracolaMagica>
+  
 
 </template>
 
 <script>
 import Calculadora from './components/Calculadora.vue';
 import Contador from './components/Contador.vue';
+import CaracolaMagica from './components/CaracolaMagica.vue';
 export default {
   name: 'App',
   data() {
@@ -16,7 +17,8 @@ export default {
   },
   components: {
     Calculadora,
-    Contador
+    Contador,
+    CaracolaMagica
   }
  ,
   methods:{
