@@ -1,12 +1,13 @@
 <template>
+  <h1>Caracola Magica</h1>
+  <img v-if="imagen !== ''" :src="imagen" alt="No se puede mostrar" />
+  <div class="db-dark"></div>
   <div class="container">
-    <h1>Caracola Magica</h1>
-    <img src="https://via.placeholder.com/250" alt="No se puede mostrar" />
-    <input type="text" placeholder="Hazme una pregunta" v-model="pregunta"/>
-    <p>Recuerda terminar con un enter la pregunta</p>
+    <input  type="text" placeholder="Hazme una pregunta" v-model="pregunta" />
+
     <div>
-      <h2>Voy a pasar de año</h2>
-      <h1>SI, NO</h1>
+      <h2>{{ pregunta }}</h2>
+      <h2>{{ respuesta }}</h2>
     </div>
   </div>
 </template>
@@ -15,14 +16,63 @@
 export default {
   data() {
     return {
-        pregunta:'Hola mundo'
+      pregunta: "",
+      respuesta: "",
+      imagen: "",
+     
     };
+  },
+  methods: {
+    async consumirApi() {
+      const { answer, image } = await fetch("https://yesno.wtf/api").then(
+        (response) => response.json()
+      );
+      this.respuesta = answer;
+      this.imagen = image;
+    },
+    cambiarEstilo(){
+
+    }
+  },
+  watch: {
+    pregunta(value, oldValue) {
+      if (value.includes("?")) {
+        this.consumirApi();
+      }
+      
+    },
   },
 };
 </script>
 
 <style>
-.container{
-    flex-direction: column;
+.container {
+  flex-direction: column;
+  position: relative;
+}
+
+img,
+.db-dark {
+  height: 100vh;
+  width: 100vw;
+  left: 0px;
+  max-height: 100%;
+  max-width: 100%;
+  position: fixed;
+  top: 0px;
+  
+}
+.db-dark {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+input{
+  width: 250px;
+  padding: 10px,15px;
+  border-radius: 5px;
+  border: none;
+}
+h2{
+  color: white;
+  font-size: 50px;
 }
 </style>
