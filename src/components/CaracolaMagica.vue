@@ -35,9 +35,13 @@ export default {
     }
   },
   watch: {
+    
     pregunta(value, oldValue) {
+      this.respuesta='Pensando...';
       if (value.includes("?")) {
         this.consumirApi();
+        this.respuesta='';
+        this.pregunta='';
       }
       
     },

@@ -1,6 +1,8 @@
 <template>
-  <CaracolaMagica ></CaracolaMagica>
   
+  <PokemonPage />
+
+
 
 </template>
 
@@ -8,6 +10,7 @@
 import Calculadora from './components/Calculadora.vue';
 import Contador from './components/Contador.vue';
 import CaracolaMagica from './components/CaracolaMagica.vue';
+import PokemonPage from "./modules/pokemon/pages/PokemonPages.vue"
 export default {
   name: 'App',
   data() {
@@ -18,7 +21,8 @@ export default {
   components: {
     Calculadora,
     Contador,
-    CaracolaMagica
+    CaracolaMagica,
+    PokemonPage
   }
  ,
   methods:{
