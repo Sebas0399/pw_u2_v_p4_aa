@@ -7,7 +7,7 @@
 
     <div>
       <h2>{{ pregunta }}</h2>
-      <h2>{{ respuesta }}</h2>
+      <h2>{{ respuesta }}</h2>       
     </div>
   </div>
 </template>

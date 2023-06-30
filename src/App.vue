@@ -1,6 +1,6 @@
 <template>
   
-  <PokemonPage />
+  <Deber />
 
 
 
@@ -8,7 +8,7 @@
 
 <script>
 
-import PokemonPage from "./modules/pokemon/pages/PokemonPages.vue"
+import Deber from "./components/Deber.vue"
 export default {
   name: 'App',
   data() {
@@ -18,7 +18,7 @@ export default {
   },
   components: {
   
-    PokemonPage
+    Deber
   }
  ,
   methods:{
