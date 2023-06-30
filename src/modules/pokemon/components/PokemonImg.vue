@@ -1,6 +1,6 @@
 <template>
   <div class="contendor-imagen">
-    <img
+    <img v-if="!muestraPokemon"
       class="oculta-pokemon"
       :src="imagenFuente"
       alt="No se puede mostrar imagen"
@@ -39,12 +39,13 @@ export default {
   filter: brightness(0);
 }
 img {
-  margin-top: 120px;
-  position: absolute;
+  
+ 
   height: 200px;
   right: 32%;
 }
 .contendor-imagen {
   height: 200px;
+  width: 300px;
 }
 </style>
