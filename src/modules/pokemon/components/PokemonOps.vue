@@ -3,7 +3,7 @@
 
  
     <ul>
-      <li v-for="pokemon in opciones" :key="pokemon.id">{{ pokemon.nombre }}</li>
+      <li v-for="pokemon in opciones" :key="pokemon.id" @click="$emit('seleccionado',pokemon.id)">{{ pokemon.nombre }}</li>
       
 
     </ul>
@@ -17,6 +17,11 @@
         type:Array,
         required:true
       }
+   }, 
+   methods:{
+    pruebaDeEvento(){
+      console.log('prueba de envento')
+    }
    }
    
   }

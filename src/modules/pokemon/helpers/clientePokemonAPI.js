@@ -13,10 +13,10 @@ const obtenerFachadaPokemons = async() => {
 };
 const obtenerVectorNumerico = () => {
   const vector = [
-    getNumeroAleatorio(1, 40),
-    getNumeroAleatorio(1, 40),
-    getNumeroAleatorio(1, 40),
-    getNumeroAleatorio(1, 40),
+    getNumeroAleatorio(1, 600),
+    getNumeroAleatorio(1, 600),
+    getNumeroAleatorio(1, 600),
+    getNumeroAleatorio(1, 600),
   ];
   return vector;
 };
