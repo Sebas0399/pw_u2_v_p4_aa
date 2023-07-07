@@ -1,14 +1,14 @@
 <template>
   
-  <PokemonPage />
 
 
 
+  <NavBar/>
+  <router-view />
 </template>
 
 <script>
-
-import PokemonPage from "./modules/pokemon/pages/PokemonPages.vue"
+import NavBar from "./modules/pokemon/components/NavBar.vue";
 export default {
   name: 'App',
   data() {
@@ -18,7 +18,7 @@ export default {
   },
   components: {
   
-    PokemonPage
+        NavBar,
   }
  ,
   methods:{
